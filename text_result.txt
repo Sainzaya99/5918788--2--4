@@ -1,0 +1,50 @@
+Input format example : A(B(D,E),C(,F))
+Empty line or 'q' to quit.
+
+Tree> 
+Input tree : A(B(D,E),C(,F))
+Nodes      : 6
+
+[Tree structure]
+A
+|-- L: B
+|   |-- L: D
+|   `-- R: E
+`-- R: C
+    |-- L: -
+    `-- R: F
+
+Preorder  : A B D E C F
+Inorder   : D B E A C F
+Postorder : D E B F C A
+
+Tree> 
+Input tree : A(B(D(H,I),E(J,)),C(F(,K),G(L,M)))
+Nodes      : 13
+
+[Tree structure]
+A
+|-- L: B
+|   |-- L: D
+|   |   |-- L: H
+|   |   `-- R: I
+|   `-- R: E
+|       |-- L: J
+|       `-- R: -
+`-- R: C
+    |-- L: F
+    |   |-- L: -
+    |   `-- R: K
+    `-- R: G
+        |-- L: L
+        `-- R: M
+
+Preorder  : A B D H I E J C F K G L M
+Inorder   : H D I B J E A F K C L G M
+Postorder : H I D J E B K F L M G C A
+
+Tree> 
+Input tree : A(B(C,D)
+[Error] Invalid tree expression: missing ')' (at position 9)
+
+Tree> Bye.
